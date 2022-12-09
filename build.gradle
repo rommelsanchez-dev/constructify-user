@@ -40,7 +40,7 @@ tasks.named('test') {
 }
 
 bootJar {
-	mainClassName = 'com.dice.constructify.user.ConstructifyUserApplication'
+	mainClass = 'com.dice.constructify.user.ConstructifyUserApplication'
 }
 
 jar {
