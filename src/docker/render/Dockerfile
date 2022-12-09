@@ -8,7 +8,6 @@ RUN gradle clean build -i --stacktrace
 FROM gradle:6.9.3-jdk11 as builder
 COPY --from=cache /home/gradle/cache_home /home/gradle/.gradle
 COPY . /usr/src/java-code/
-COPY .env /usr/src/java-code/
 WORKDIR /usr/src/java-code
 RUN gradle clean build
 
