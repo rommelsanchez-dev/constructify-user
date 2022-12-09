@@ -9,7 +9,7 @@ FROM gradle:6.9.3-jdk11 as builder
 COPY --from=cache /home/gradle/cache_home /home/gradle/.gradle
 COPY . /usr/src/java-code/
 WORKDIR /usr/src/java-code
-RUN gradle clean build
+RUN ./gradlew clean build
 
 FROM openjdk:11-jre-slim
 EXPOSE 8080
