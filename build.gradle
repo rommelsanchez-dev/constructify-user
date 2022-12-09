@@ -39,6 +39,9 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+bootJar {
+	mainClassName = 'com.dice.constructify.user.ConstructifyUserApplication'
+}
 
 jar {
 	manifest {
